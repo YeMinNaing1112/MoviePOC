@@ -25,7 +25,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@drawable/place_holder_wolvering"
+                tools:src="@drawable/place_holder_wolvering"
                 app:layout_collapseMode="parallax" />
 
             <View
@@ -74,7 +74,7 @@
                     android:layout_marginStart="@dimen/margin_medium_2"
                     android:layout_marginEnd="@dimen/margin_medium_2"
                     android:layout_marginBottom="@dimen/margin_medium_3"
-                    android:text="Fantastic Beasts And Where To Find Them"
+                    tools:text="Fantastic Beasts And Where To Find Them"
                     android:textColor="@color/white"
                     android:textSize="@dimen/text_heading_1x" />
 
@@ -87,7 +87,7 @@
                     android:layout_marginBottom="@dimen/margin_medium_2"
                     android:background="@drawable/background_relaese_year"
                     android:gravity="center"
-                    android:text="2016"
+                    tools:text="2016"
                     android:textColor="@color/white"
                     android:textStyle="bold" />
 
@@ -99,7 +99,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="@dimen/margin_medium_2"
                     android:layout_marginBottom="@dimen/margin_medium"
-                    android:text="9,75"
+                    tools:text="9,75"
                     android:textColor="@color/white"
                     android:textSize="@dimen/text_big" />
 
@@ -113,7 +113,7 @@
                     android:layout_marginEnd="@dimen/margin_medium"
                     android:layout_toStartOf="@id/tvRating"
                     android:numStars="5"
-                    android:rating="5" />
+                    tools:rating="5" />
 
                 <TextView
                     android:id="@+id/tvNumberOfVotes"
@@ -123,7 +123,7 @@
                     android:layout_marginEnd="@dimen/margin_medium"
                     android:layout_marginBottom="@dimen/margin_card_medium_2"
                     android:layout_toStartOf="@id/tvRating"
-                    android:text="38876 VOTES"
+                    tools:text="38876 VOTES"
                     android:textColor="@color/colorSecondaryText"
                     android:textSize="@dimen/text_small"
                     android:textStyle="bold" />
@@ -167,7 +167,7 @@
                 android:layout_marginStart="@dimen/margin_medium"
                 android:layout_toEndOf="@+id/ivTime"
                 android:paddingTop="@dimen/margin_small"
-                android:text="2h 13min"
+                tools:text="2h 13min"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 
@@ -181,7 +181,7 @@
                 android:gravity="center"
                 android:paddingStart="@dimen/margin_medium"
                 android:paddingEnd="@dimen/margin_medium"
-                android:text="Action" />
+                tools:text="Action" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvSecondGenre"
@@ -193,7 +193,7 @@
                 android:gravity="center"
                 android:paddingStart="@dimen/margin_medium"
                 android:paddingEnd="@dimen/margin_medium"
-                android:text="Family" />
+                tools:text="Family" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvThirdGenre"
@@ -205,7 +205,7 @@
                 android:gravity="center"
                 android:paddingStart="@dimen/margin_medium"
                 android:paddingEnd="@dimen/margin_medium"
-                android:text="Adventure" />
+                tools:text="Adventure" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/ivFavourite"
@@ -235,7 +235,7 @@
                 android:layout_marginStart="@dimen/margin_medium_2"
                 android:layout_marginTop="@dimen/margin_card_medium_2"
                 android:layout_marginEnd="@dimen/margin_medium_2"
-                android:text="Lured to a Japan he hasn't seen since World War II, century-old mutant Wolverine (Hugh Jackman) finds himself in a shadowy realm of yakuza and samurai. Wolverine is pushed to his physical and emotional brink when he is forced to go on the run with a powerful industrialist's daughter (Tao Okamoto) and is confronted -- for the first time -- with the prospect of death. As he struggles to rediscover the hero within himself, he must grapple with powerful foes and the ghosts of his own haunted past."
+                tools:text="Lured to a Japan he hasn't seen since World War II, century-old mutant Wolverine (Hugh Jackman) finds himself in a shadowy realm of yakuza and samurai. Wolverine is pushed to his physical and emotional brink when he is forced to go on the run with a powerful industrialist's daughter (Tao Okamoto) and is confronted -- for the first time -- with the prospect of death. As he struggles to rediscover the hero within himself, he must grapple with powerful foes and the ghosts of his own haunted past."
                 android:textColor="@color/white" />
 
             <RelativeLayout
@@ -344,7 +344,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.7"
-                    android:text="Fantastic Beast and Where to Find Them"
+                    tools:text="Fantastic Beast and Where to Find Them"
                     android:textColor="@color/white" />
 
             </LinearLayout>
@@ -374,7 +374,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.7"
-                    android:text="Fantasy, Family, Adventure"
+                    tools:text="Fantasy, Family, Adventure"
                     android:textColor="@color/white" />
 
 
@@ -405,7 +405,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.7"
-                    android:text="United Kingdom, USA"
+                    tools:text="United Kingdom, USA"
                     android:textColor="@color/white" />
 
 
@@ -436,7 +436,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.7"
-                    android:text="8 November 2016 (World)"
+                    tools:text="8 November 2016 (World)"
                     android:textColor="@color/white" />
 
 
@@ -468,7 +468,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.7"
-                    android:text="Lured to a Japan he hasn't seen since World War II, century-old mutant Wolverine (Hugh Jackman) finds himself in a shadowy realm of yakuza and samurai. Wolverine is pushed to his physical and emotional brink when he is forced to go on the run with a powerful industrialist's daughter (Tao Okamoto) and is confronted -- for the first time -- with the prospect of death. As he struggles to rediscover the hero within himself, he must grapple with powerful foes and the ghosts of his own haunted past."
+                    tools:text="Lured to a Japan he hasn't seen since World War II, century-old mutant Wolverine (Hugh Jackman) finds himself in a shadowy realm of yakuza and samurai. Wolverine is pushed to his physical and emotional brink when he is forced to go on the run with a powerful industrialist's daughter (Tao Okamoto) and is confronted -- for the first time -- with the prospect of death. As he struggles to rediscover the hero within himself, he must grapple with powerful foes and the ghosts of his own haunted past."
                     android:textColor="@color/white" />
 
 

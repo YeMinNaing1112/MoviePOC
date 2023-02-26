@@ -9,7 +9,7 @@ data class ProductionCompanyVo(
     @SerializedName("logo_path")
     val logoPath:String?,
     @SerializedName("name")
-    val name:Name?,
+    val name:String?,
     @SerializedName("origin_country")
     val originCountry:String?,
 )

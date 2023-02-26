@@ -82,7 +82,7 @@ data class MovieVO(
     }
 
     fun getGenresAsCommaSeparatedString(): String {
-        return genres?.map { it.name }?.joinToString { "," } ?: ""
+        return genres?.map { it.name }?.joinToString(",")gi?: ""
     }
 
     fun getProductionCountriesAsCommaSeparated(): String {
