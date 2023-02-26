@@ -1,5 +1,5 @@
 package com.yeminnaing.movieapplication.delegates
 
 interface BannerViewHolderDelegate {
-    fun onTapMovieFromBanner()
+    fun onTapMovieFromBanner(movieId: Long)
 }

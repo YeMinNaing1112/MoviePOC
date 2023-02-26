@@ -1,5 +1,5 @@
 package com.yeminnaing.movieapplication.delegates
 
 interface ShowCaseViewHolderDelegate {
-    fun onTapMovieFromShowCase()
+    fun onTapMovieFromShowCase(movieId: Long)
 }

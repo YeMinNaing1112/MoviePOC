@@ -1,5 +1,5 @@
 package com.yeminnaing.movieapplication.delegates
 
 interface MovieViewHolderDelegate {
-    fun onTapMovie()
+    fun onTapMovie(movieId: Long)
 }

@@ -5,6 +5,7 @@ import android.util.AttributeSet
 import android.widget.FrameLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.yeminnaing.movieapplication.adapters.MovieAdapter
+import com.yeminnaing.movieapplication.data.vos.MovieVO
 import com.yeminnaing.movieapplication.delegates.MovieViewHolderDelegate
 import kotlinx.android.synthetic.main.view_pod_movie_list.view.*
 
@@ -35,6 +36,10 @@ class MovieListViewPod @JvmOverloads constructor(
         rvMovieList.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         rvMovieList.setHasFixedSize(true)
+    }
+
+    fun setData(movieList:List<MovieVO>) {
+       mMovieAdapter.setNewData(movieList)
     }
 
 }

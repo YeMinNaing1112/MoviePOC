@@ -7,6 +7,7 @@ import android.widget.RelativeLayout
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.yeminnaing.movieapplication.adapters.ActorAdapter
+import com.yeminnaing.movieapplication.data.vos.ActorVo
 import kotlinx.android.synthetic.main.view_pod_actor_list.view.*
 
 class ActorsListViewPod @JvmOverloads constructor(
@@ -17,6 +18,7 @@ class ActorsListViewPod @JvmOverloads constructor(
     override fun onFinishInflate() {
         setActorRecyclerView()
         super.onFinishInflate()
+
     }
 
     fun setUpActorViewPod(backGroundColorReference: Int, titleText: String, moreTitleText: String) {
@@ -31,5 +33,9 @@ class ActorsListViewPod @JvmOverloads constructor(
         rvBestActor.adapter = mActorAdapter
         rvBestActor.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+    }
+
+    fun setData(actors: List<ActorVo>) {
+      mActorAdapter.setNewData(actors)
     }
 }
