@@ -2,6 +2,7 @@ package com.yeminnaing.movieapplication.activites
 
 import android.os.Bundle
 import android.view.Menu
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.tabs.TabLayout
@@ -43,6 +44,7 @@ class MainActivity : AppCompatActivity(), BannerViewHolderDelegate, ShowCaseView
         setUpViewPod()
         requestData()
 
+
     }
 
     private fun requestData() {
@@ -51,7 +53,7 @@ class MainActivity : AppCompatActivity(), BannerViewHolderDelegate, ShowCaseView
                 mBannerAdapter.setNewData(it)
             },
             onFailure = {
-
+                showErrors(it)
             }
         )
 
@@ -60,7 +62,7 @@ class MainActivity : AppCompatActivity(), BannerViewHolderDelegate, ShowCaseView
                 mBestPopularMovieListViewPot.setData(it)
             },
             onFailure = {
-
+                showErrors(it)
             }
         )
 
@@ -70,7 +72,7 @@ class MainActivity : AppCompatActivity(), BannerViewHolderDelegate, ShowCaseView
 
             },
             onFailure = {
-
+                showErrors(it)
             }
         )
         mModelView.getGenre(
@@ -82,7 +84,7 @@ class MainActivity : AppCompatActivity(), BannerViewHolderDelegate, ShowCaseView
                 }
             },
             onFailure = {
-
+                showErrors(it)
             }
         )
 
@@ -90,9 +92,13 @@ class MainActivity : AppCompatActivity(), BannerViewHolderDelegate, ShowCaseView
             onSuccess = {
                 mActorListViewPod.setData(it)
             }, onFailure = {
-
+                showErrors(it)
             }
         )
+    }
+
+    private fun showErrors(error: String) {
+        Toast.makeText(this, error, Toast.LENGTH_SHORT).show()
     }
 
     private fun getMovieByGenreId(genreId: Int) {

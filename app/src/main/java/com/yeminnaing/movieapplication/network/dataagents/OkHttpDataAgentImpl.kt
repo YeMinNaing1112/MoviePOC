@@ -35,7 +35,7 @@ import java.util.concurrent.TimeUnit
 //    }
 //
 //    override fun getGenre(onSuccess: (List<GenreVo>) -> Unit, onFailure: (String) -> Unit) {
-//        TODO("Not yet implemented")
+//
 //    }
 //
 //    override fun getMovieByGenre(

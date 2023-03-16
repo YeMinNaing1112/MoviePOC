@@ -3,15 +3,16 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-android-extensions'
 }
+apply plugin: 'kotlin-kapt'
 
 android {
     namespace 'com.yeminnaing.movieapplication'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.yeminnaing.movieapplication"
         minSdk 28
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -41,6 +42,9 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.7.1'
+    implementation 'androidx.room:room-ktx:2.5.0'
+
+
     testImplementation 'junit:junit:4.13.2'
     implementation 'com.tbuonomo:dotsindicator:4.3'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
@@ -49,5 +53,10 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp:4.10.0")
     implementation 'com.github.bumptech.glide:glide:4.14.2'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
+
+    kapt 'androidx.room:room-compiler:2.5.0'
+    implementation "androidx.room:room-runtime:2.5.0"
+    implementation "androidx.room:room-common:2.5.0"
+
 
 }
