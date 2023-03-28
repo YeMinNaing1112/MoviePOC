@@ -42,4 +42,5 @@ class MovieListViewPod @JvmOverloads constructor(
        mMovieAdapter.setNewData(movieList)
     }
 
+
 }

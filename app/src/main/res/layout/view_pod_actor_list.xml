@@ -2,8 +2,8 @@
 <com.yeminnaing.movieapplication.viewpods.ActorsListViewPod xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorPrimaryDark"
     android:layout_marginBottom="@dimen/margin_large"
+    android:background="@color/colorPrimaryDark"
     android:paddingTop="@dimen/margin_large"
     android:paddingBottom="@dimen/margin_medium_2">
 
@@ -25,16 +25,15 @@
         android:text="@string/lbl_more_actors"
         android:textColor="@color/white"
         android:textStyle="bold" />
-    
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvBestActor"
-        android:layout_below="@+id/tvBestActor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:clipToPadding="false"
-        android:paddingEnd="@dimen/margin_medium_2"
+        android:layout_below="@+id/tvBestActor"
         android:layout_marginTop="@dimen/margin_card_medium_2"
-        />
+        android:clipToPadding="false"
+        android:paddingEnd="@dimen/margin_medium_2" />
 
 
 </com.yeminnaing.movieapplication.viewpods.ActorsListViewPod>

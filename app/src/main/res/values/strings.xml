@@ -18,4 +18,5 @@
     <string name="lbl_premiere">Premiere:</string>
     <string name="lbl_description">Description:</string>
     <string name="lbl_about_film">About Film</string>
+    <string name="lbl_search_movie">Please Enter Movie Name</string>
 </resources>

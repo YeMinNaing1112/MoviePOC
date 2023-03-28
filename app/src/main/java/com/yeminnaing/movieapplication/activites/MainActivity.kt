@@ -1,5 +1,6 @@
 package com.yeminnaing.movieapplication.activites
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.widget.Toast
@@ -48,33 +49,27 @@ class MainActivity : AppCompatActivity(), BannerViewHolderDelegate, ShowCaseView
     }
 
     private fun requestData() {
-        mModelView.getNowPlayingMovie(
-            onSuccess = {
-                mBannerAdapter.setNewData(it)
-            },
-            onFailure = {
-                showErrors(it)
-            }
-        )
+        mModelView.getNowPlayingMovie {
+            showErrors(it)
+        }?.observe(this) {
+            mBannerAdapter.setNewData(it)
+        }
 
-        mModelView.getPopularMovie(
-            onSuccess = {
-                mBestPopularMovieListViewPot.setData(it)
-            },
-            onFailure = {
-                showErrors(it)
-            }
-        )
 
-        mModelView.getTopRatedMovie(
-            onSuccess = {
-                mShowCaseAdapter.setNewData(it)
 
-            },
-            onFailure = {
-                showErrors(it)
-            }
-        )
+        mModelView.getPopularMovie {
+            showErrors(it)
+        }?.observe(this) {
+            mBestPopularMovieListViewPot.setData(it)
+        }
+
+
+        mModelView.getTopRatedMovie {
+            showErrors(it)
+        }?.observe(this) {
+            mShowCaseAdapter.setNewData(it)
+        }
+
         mModelView.getGenre(
             onSuccess = {
                 mGenre = it
@@ -103,11 +98,15 @@ class MainActivity : AppCompatActivity(), BannerViewHolderDelegate, ShowCaseView
 
     private fun getMovieByGenreId(genreId: Int) {
         mModelView.getMovieByGenre(genreId = genreId.toString(),
-            onSuccess = {
-                mMovieByGenreViewPod.setData(it)
-            }, onFailure = {
+//            onSuccess = {
+//                mMovieByGenreViewPod.setData(it)
+//            },
+            onFailure = {
+                showErrors(it)
+            })?.observe(this) {
+            mMovieByGenreViewPod.setData(it)
+        }
 
-            })
     }
 
     fun setUpViewPod() {
@@ -120,6 +119,20 @@ class MainActivity : AppCompatActivity(), BannerViewHolderDelegate, ShowCaseView
     }
 
     private fun setUpListener() {
+
+        //SearchButton
+        toolBar.setOnMenuItemClickListener {
+            when (it.itemId) {
+                R.id.btnSearch -> {
+                    startActivity(Intent(applicationContext, MovieSearchActivity::class.java))
+                    println("Bla")
+                    false
+                }
+                else -> {
+                    true
+                }
+            }
+        }
         // Genre Tab Layout
         tabLayoutGenre.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {

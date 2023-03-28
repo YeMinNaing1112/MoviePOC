@@ -1,24 +1,23 @@
 package com.yeminnaing.movieapplication.data.models
 
+import androidx.lifecycle.LiveData
 import com.yeminnaing.movieapplication.data.vos.ActorVo
 import com.yeminnaing.movieapplication.data.vos.GenreVo
 import com.yeminnaing.movieapplication.data.vos.MovieVO
+import io.reactivex.rxjava3.core.Observable
 
 interface MovieModel {
     fun getNowPlayingMovie(
-        onSuccess: (List<MovieVO>) -> Unit,
         onFailure: (String) -> Unit,
-    )
+    ): LiveData<List<MovieVO>>?
 
     fun getPopularMovie(
-        onSuccess: (List<MovieVO>) -> Unit,
         onFailure: (String) -> Unit,
-    )
+    ): LiveData<List<MovieVO>>?
 
     fun getTopRatedMovie(
-        onSuccess: (List<MovieVO>) -> Unit,
         onFailure: (String) -> Unit,
-    )
+    ): LiveData<List<MovieVO>>?
 
     fun getGenre(
         onSuccess: (List<GenreVo>) -> Unit,
@@ -27,9 +26,8 @@ interface MovieModel {
 
     fun getMovieByGenre(
         genreId: String,
-        onSuccess: (List<MovieVO>) -> Unit,
         onFailure: (String) -> Unit,
-    )
+    ): LiveData<List<MovieVO>>?
 
     fun getActors(
         onSuccess: (List<ActorVo>) -> Unit,
@@ -38,13 +36,17 @@ interface MovieModel {
 
     fun getMovieDetails(
         movieId: String,
-        onSuccess: (MovieVO) -> Unit,
         onFailure: (String) -> Unit,
-    )
+    ): LiveData<MovieVO?>?
 
     fun getCreditByMovie(
         movieId: String,
-        onSuccess: (Pair<List<ActorVo>,List<ActorVo>>) -> Unit,
+        onSuccess: (Pair<List<ActorVo>, List<ActorVo>>) -> Unit,
         onFailure: (String) -> Unit,
     )
+
+
+    fun searchMovie(
+        query: String
+    ): Observable<List<MovieVO>>
 }

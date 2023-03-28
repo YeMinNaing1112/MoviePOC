@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="@dimen/width_showcase"
     android:layout_height="@dimen/height_showcase"
-    android:layout_marginStart="@dimen/margin_medium_2"
-   >
+    android:layout_marginStart="@dimen/margin_medium_2">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivShowCase"
@@ -46,11 +45,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/tvShowCaseMovieDate"
+        android:layout_marginStart="@dimen/margin_medium_2"
         android:layout_marginBottom="@dimen/margin_small"
         android:elevation="@dimen/margin_medium_2"
         android:text="Passengers"
         android:textColor="@color/white"
-        android:layout_marginStart="@dimen/margin_medium_2"
         android:textSize="@dimen/text_regular_2x"
         android:textStyle="bold" />
 

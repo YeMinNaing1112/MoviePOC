@@ -3,6 +3,7 @@ package com.yeminnaing.movieapplication.activites
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.yeminnaing.movieapplication.R
@@ -49,12 +50,17 @@ class MovieDetailsActivity : AppCompatActivity() {
     private fun requestData(movieId: Long) {
         mMovieModel.getMovieDetails(
             movieId = movieId.toString(),
-            onSuccess = {
-                bindData(it)
-            }, onFailure = {
-
+//            onSuccess = {
+//                bindData(it)
+//            },
+            onFailure = {
+               showError(it)
             }
-        )
+        )?.observe(this) {
+            if (it != null) {
+                bindData(it)
+            }
+        }
 
         mMovieModel.getCreditByMovie(
             movieId = movieId.toString(),
@@ -62,9 +68,14 @@ class MovieDetailsActivity : AppCompatActivity() {
                 actorsViewPod.setData(it.first)
                 creatorsViewPod.setData(it.second)
             }, onFailure = {
+                showError(it)
 
             }
         )
+    }
+
+    private fun showError(it: String) {
+        Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
     }
 
 

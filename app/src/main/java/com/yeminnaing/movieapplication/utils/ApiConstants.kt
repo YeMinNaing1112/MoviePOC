@@ -14,11 +14,13 @@ const val API_GET_ACTORS = "/3/person/popular"
 
 const val API_GET_MOVIE_DETAILS = "/3/movie"
 const val API_GET_CREDITS_BY_MOVIE = "/3/movie"
+const val API_SEARCH_MOVIES="/3/search/movie"
 
 
 //Params
 const val PARAM_API_KEY = "api_key"
 const val PARAM_PAGE = "page"
+const val PARAM_QUERY = "query"
 const val PARAM_GENRE_ID = "with_genres"
 const val MOVIE_API_KEY = "3f043532ef0e0abb7bbdba9ed0e3f72e"
 
