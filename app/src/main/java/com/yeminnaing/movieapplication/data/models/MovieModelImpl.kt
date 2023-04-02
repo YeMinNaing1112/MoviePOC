@@ -66,6 +66,7 @@ object MovieModelImpl : BaseModel(), MovieModel {
             })
     }
 
+
     override fun getMovieByGenre(
         genreId: String,
         onFailure: (String) -> Unit,
